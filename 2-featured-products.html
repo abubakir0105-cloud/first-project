@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopper - Featured Products</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- ===== SECTION CSS START (feat) ===== -->
+<style>
+
+.feat{--feat-green:#16b57a;--feat-purple:#8a5cc8;--feat-ink:#1f2430;--feat-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--feat-ink);box-sizing:border-box;width:100%;}
+.feat *,.feat *::before,.feat *::after{box-sizing:border-box;}
+.feat a{text-decoration:none;color:inherit;}
+.feat h1,.feat h2,.feat h3,.feat p,.feat ul{margin:0;padding:0;}
+.feat ul{list-style:none;}
+.feat button{font-family:inherit;cursor:pointer;}
+
+.feat{background:var(--feat-purple);color:#fff;padding:48px 64px;}
+.feat__inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;max-width:1100px;margin:0 auto;}
+.feat__left{flex:1 1 360px;}
+.feat__name{font-size:38px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:16px;}
+.feat__arches{display:flex;gap:12px;align-items:flex-end;}
+.feat__arch{width:90px;background:#fff;border-radius:60px;display:grid;place-items:center;font-size:44px;}
+.feat__arch--1{height:150px;}.feat__arch--2{height:180px;}.feat__arch--3{height:150px;}
+.feat__price{margin-top:14px;font-size:15px;}
+.feat__price b{font-size:18px;}
+.feat__right{flex:1 1 320px;max-width:420px;}
+.feat__title{font-size:26px;font-weight:600;margin-bottom:12px;}
+.feat__desc{font-size:13px;line-height:1.7;opacity:.85;margin-bottom:24px;}
+.feat__actions{display:flex;align-items:center;gap:20px;}
+.feat__btn{background:var(--feat-green);color:#fff;border:0;border-radius:6px;padding:12px 28px;font-size:14px;font-weight:500;}
+.feat__link{font-size:14px;}
+@media(max-width:700px){.feat{padding:32px 20px;}}
+
+</style>
+<!-- ===== SECTION CSS END (feat) ===== -->
+</head>
+<body style="margin:0">
+<!-- ===== SECTION HTML START (feat) ===== -->
+<section class="feat" id="feat-root">
+  <div class="feat__inner">
+    <div class="feat__left">
+      <h2 class="feat__name">Apple wireless Airpod</h2>
+      <div class="feat__arches">
+        <div class="feat__arch feat__arch--1">&#127911;</div>
+        <div class="feat__arch feat__arch--2">&#127911;</div>
+        <div class="feat__arch feat__arch--3">&#127807;</div>
+      </div>
+      <p class="feat__price">Price : <b>$45.99</b></p>
+    </div>
+    <div class="feat__right">
+      <h3 class="feat__title">Our Featured Products</h3>
+      <p class="feat__desc">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product.</p>
+      <div class="feat__actions">
+        <button class="feat__btn" id="feat-add" type="button">Add to cart</button>
+        <a class="feat__link" href="#">View more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== SECTION HTML END (feat) ===== -->
+
+
+
+</body>
+</html>
