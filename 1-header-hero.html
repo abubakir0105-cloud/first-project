@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopper - Header & Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- ===== SECTION CSS START (hdr) ===== -->
+<style>
+
+.hdr{--hdr-green:#16b57a;--hdr-purple:#8a5cc8;--hdr-ink:#1f2430;--hdr-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--hdr-ink);box-sizing:border-box;width:100%;}
+.hdr *,.hdr *::before,.hdr *::after{box-sizing:border-box;}
+.hdr a{text-decoration:none;color:inherit;}
+.hdr h1,.hdr h2,.hdr h3,.hdr p,.hdr ul{margin:0;padding:0;}
+.hdr ul{list-style:none;}
+.hdr button{font-family:inherit;cursor:pointer;}
+
+.hdr{background:#fff;}
+.hdr__top{display:flex;align-items:center;gap:16px;padding:14px 32px;flex-wrap:wrap;}
+.hdr__logo{font-size:22px;font-weight:700;color:var(--hdr-green);margin-right:auto;}
+.hdr__search{display:flex;border:1px solid #dfe3ea;border-radius:8px;overflow:hidden;}
+.hdr__search-input{border:0;padding:8px 12px;font-family:inherit;font-size:13px;outline:0;width:180px;}
+.hdr__search-btn{border:0;background:var(--hdr-green);color:#fff;padding:0 12px;}
+.hdr__loc{font-size:13px;color:var(--hdr-muted);}
+.hdr__signup{border:1px solid var(--hdr-green);color:var(--hdr-green);border-radius:20px;padding:8px 16px;font-size:13px;background:#fff;}
+.hdr__nav{background:var(--hdr-green);display:flex;justify-content:center;gap:40px;padding:14px;}
+.hdr__nav-link{color:#fff;font-size:14px;font-weight:500;}
+.hdr__nav-link:hover{text-decoration:underline;}
+.hdr__hero{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:56px 64px 40px;flex-wrap:wrap;position:relative;}
+.hdr__text{max-width:420px;}
+.hdr__title{font-size:44px;line-height:1.15;font-weight:600;}
+.hdr__desc{margin:16px 0 24px;color:var(--hdr-muted);font-size:14px;line-height:1.7;}
+.hdr__btn{display:inline-block;background:var(--hdr-green);color:#fff;padding:12px 28px;border-radius:6px;font-weight:500;font-size:14px;}
+.hdr__visual{position:relative;width:300px;height:340px;display:flex;align-items:center;justify-content:center;}
+.hdr__blob{position:absolute;inset:30px 20px 0 20px;background:#e3f6ee;border-radius:120px 120px 20px 20px;}
+.hdr__product{position:relative;font-size:130px;line-height:1;}
+.hdr__product-name{position:absolute;top:0;left:-30px;font-weight:600;font-size:18px;transform:rotate(-12deg);}
+.hdr__price{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-weight:600;}
+.hdr__footer-row{display:flex;justify-content:space-between;align-items:center;padding:0 64px 32px;flex-wrap:wrap;gap:16px;}
+.hdr__reviews{display:flex;align-items:center;gap:10px;font-size:13px;}
+.hdr__avatars{display:flex;}
+.hdr__avatar{width:28px;height:28px;border-radius:50%;border:2px solid #fff;margin-left:-8px;background:#c9b6ea;}
+.hdr__avatar:first-child{margin-left:0;background:#f1c9a5;}
+.hdr__play{display:flex;align-items:center;gap:10px;font-size:13px;}
+.hdr__play-icon{width:40px;height:40px;border-radius:50%;background:#e3f6ee;display:grid;place-items:center;}
+@media(max-width:700px){.hdr__hero{padding:32px 20px;}.hdr__title{font-size:32px;}.hdr__nav{gap:18px;}.hdr__footer-row{padding:0 20px 24px;}}
+
+</style>
+<!-- ===== SECTION CSS END (hdr) ===== -->
+</head>
+<body style="margin:0">
+<!-- ===== SECTION HTML START (hdr) ===== -->
+<header class="hdr" id="hdr-root">
+  <div class="hdr__top">
+    <a class="hdr__logo" href="#">Shopper</a>
+    <form class="hdr__search" id="hdr-search" onsubmit="return false">
+      <input class="hdr__search-input" id="hdr-search-input" type="text" placeholder="Search products">
+      <button class="hdr__search-btn" type="submit" aria-label="Search">&#128269;</button>
+    </form>
+    <span class="hdr__loc">&#128205; Choose location</span>
+    <button class="hdr__signup" type="button">Sign in / Sign up</button>
+  </div>
+  <nav class="hdr__nav" id="hdr-nav">
+    <a class="hdr__nav-link" href="#">Features</a>
+    <a class="hdr__nav-link" href="#">Products</a>
+    <a class="hdr__nav-link" href="#">Blog</a>
+    <a class="hdr__nav-link" href="#">About</a>
+  </nav>
+  <div class="hdr__hero" id="hdr-hero">
+    <div class="hdr__text">
+      <h1 class="hdr__title">Discover Our Latest Products</h1>
+      <p class="hdr__desc">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product.</p>
+      <a class="hdr__btn" href="#">Buy Now</a>
+    </div>
+    <div class="hdr__visual">
+      <div class="hdr__blob"></div>
+      <span class="hdr__product-name">Red Beats M19c2zm/a</span>
+      <span class="hdr__product">&#127911;</span>
+      <span class="hdr__price">$50</span>
+    </div>
+  </div>
+  <div class="hdr__footer-row">
+    <div class="hdr__reviews">
+      <div class="hdr__avatars"><span class="hdr__avatar"></span><span class="hdr__avatar"></span><span class="hdr__avatar"></span></div>
+      <span>Yak Well<br>Reviews</span>
+    </div>
+    <a class="hdr__play" href="#"><span class="hdr__play-icon">&#9654;</span>Play Video</a>
+  </div>
+</header>
+<!-- ===== SECTION HTML END (hdr) ===== -->
+
+
+
+</body>
+</html>
