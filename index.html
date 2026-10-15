@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+.hdr{--hdr-green:#16b57a;--hdr-purple:#8a5cc8;--hdr-ink:#1f2430;--hdr-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--hdr-ink);box-sizing:border-box;width:100%;}
+.hdr *,.hdr *::before,.hdr *::after{box-sizing:border-box;}
+.hdr a{text-decoration:none;color:inherit;}
+.hdr h1,.hdr h2,.hdr h3,.hdr p,.hdr ul{margin:0;padding:0;}
+.hdr ul{list-style:none;}
+.hdr button{font-family:inherit;cursor:pointer;}
+
+.hdr{background:#fff;}
+.hdr__top{display:flex;align-items:center;gap:16px;padding:14px 32px;flex-wrap:wrap;}
+.hdr__logo{font-size:22px;font-weight:700;color:var(--hdr-green);margin-right:auto;}
+.hdr__search{display:flex;border:1px solid #dfe3ea;border-radius:8px;overflow:hidden;}
+.hdr__search-input{border:0;padding:8px 12px;font-family:inherit;font-size:13px;outline:0;width:180px;}
+.hdr__search-btn{border:0;background:var(--hdr-green);color:#fff;padding:0 12px;}
+.hdr__loc{font-size:13px;color:var(--hdr-muted);}
+.hdr__signup{border:1px solid var(--hdr-green);color:var(--hdr-green);border-radius:20px;padding:8px 16px;font-size:13px;background:#fff;}
+.hdr__nav{background:var(--hdr-green);display:flex;justify-content:center;gap:40px;padding:14px;}
+.hdr__nav-link{color:#fff;font-size:14px;font-weight:500;}
+.hdr__nav-link:hover{text-decoration:underline;}
+.hdr__hero{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:56px 64px 40px;flex-wrap:wrap;position:relative;}
+.hdr__text{max-width:420px;}
+.hdr__title{font-size:44px;line-height:1.15;font-weight:600;}
+.hdr__desc{margin:16px 0 24px;color:var(--hdr-muted);font-size:14px;line-height:1.7;}
+.hdr__btn{display:inline-block;background:var(--hdr-green);color:#fff;padding:12px 28px;border-radius:6px;font-weight:500;font-size:14px;}
+.hdr__visual{position:relative;width:300px;height:340px;display:flex;align-items:center;justify-content:center;}
+.hdr__blob{position:absolute;inset:30px 20px 0 20px;background:#e3f6ee;border-radius:120px 120px 20px 20px;}
+.hdr__product{position:relative;font-size:130px;line-height:1;}
+.hdr__product-name{position:absolute;top:0;left:-30px;font-weight:600;font-size:18px;transform:rotate(-12deg);}
+.hdr__price{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-weight:600;}
+.hdr__footer-row{display:flex;justify-content:space-between;align-items:center;padding:0 64px 32px;flex-wrap:wrap;gap:16px;}
+.hdr__reviews{display:flex;align-items:center;gap:10px;font-size:13px;}
+.hdr__avatars{display:flex;}
+.hdr__avatar{width:28px;height:28px;border-radius:50%;border:2px solid #fff;margin-left:-8px;background:#c9b6ea;}
+.hdr__avatar:first-child{margin-left:0;background:#f1c9a5;}
+.hdr__play{display:flex;align-items:center;gap:10px;font-size:13px;}
+.hdr__play-icon{width:40px;height:40px;border-radius:50%;background:#e3f6ee;display:grid;place-items:center;}
+@media(max-width:700px){.hdr__hero{padding:32px 20px;}.hdr__title{font-size:32px;}.hdr__nav{gap:18px;}.hdr__footer-row{padding:0 20px 24px;}}
+
+</style>
+<style>
+
+.feat{--feat-green:#16b57a;--feat-purple:#8a5cc8;--feat-ink:#1f2430;--feat-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--feat-ink);box-sizing:border-box;width:100%;}
+.feat *,.feat *::before,.feat *::after{box-sizing:border-box;}
+.feat a{text-decoration:none;color:inherit;}
+.feat h1,.feat h2,.feat h3,.feat p,.feat ul{margin:0;padding:0;}
+.feat ul{list-style:none;}
+.feat button{font-family:inherit;cursor:pointer;}
+
+.feat{background:var(--feat-purple);color:#fff;padding:48px 64px;}
+.feat__inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;max-width:1100px;margin:0 auto;}
+.feat__left{flex:1 1 360px;}
+.feat__name{font-size:38px;font-weight:700;color:rgba(255,255,255,.35);margin-bottom:16px;}
+.feat__arches{display:flex;gap:12px;align-items:flex-end;}
+.feat__arch{width:90px;background:#fff;border-radius:60px;display:grid;place-items:center;font-size:44px;}
+.feat__arch--1{height:150px;}.feat__arch--2{height:180px;}.feat__arch--3{height:150px;}
+.feat__price{margin-top:14px;font-size:15px;}
+.feat__price b{font-size:18px;}
+.feat__right{flex:1 1 320px;max-width:420px;}
+.feat__title{font-size:26px;font-weight:600;margin-bottom:12px;}
+.feat__desc{font-size:13px;line-height:1.7;opacity:.85;margin-bottom:24px;}
+.feat__actions{display:flex;align-items:center;gap:20px;}
+.feat__btn{background:var(--feat-green);color:#fff;border:0;border-radius:6px;padding:12px 28px;font-size:14px;font-weight:500;}
+.feat__link{font-size:14px;}
+@media(max-width:700px){.feat{padding:32px 20px;}}
+
+</style>
+<style>
+
+.tops{--tops-green:#16b57a;--tops-purple:#8a5cc8;--tops-ink:#1f2430;--tops-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--tops-ink);box-sizing:border-box;width:100%;}
+.tops *,.tops *::before,.tops *::after{box-sizing:border-box;}
+.tops a{text-decoration:none;color:inherit;}
+.tops h1,.tops h2,.tops h3,.tops p,.tops ul{margin:0;padding:0;}
+.tops ul{list-style:none;}
+.tops button{font-family:inherit;cursor:pointer;}
+
+.tops{padding:48px 40px;background:#fff;}
+.tops__title{text-align:center;font-size:20px;font-weight:600;margin-bottom:20px;}
+.tops__tabs{display:flex;justify-content:center;gap:10px;margin-bottom:28px;}
+.tops__tab{border:0;background:transparent;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:500;}
+.tops__tab--active{background:var(--tops-green);color:#fff;}
+.tops__row{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;}
+.tops__grid{flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+.tops__arrow{color:var(--tops-green);font-size:22px;border:0;background:none;}
+.tops__card{border-radius:10px;padding:14px;position:relative;}
+.tops__badge{position:absolute;top:12px;right:12px;background:var(--tops-green);color:#fff;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:9px;line-height:1.1;text-align:center;}
+.tops__img{height:150px;display:grid;place-items:center;font-size:72px;}
+.tops__info{background:#fff;border-radius:8px;padding:10px 12px;margin-top:8px;font-size:12px;}
+.tops__name{font-weight:500;}
+.tops__stars{color:#f5a623;font-size:11px;margin:4px 0;}
+.tops__stars small{color:var(--tops-muted);}
+.tops__price{font-weight:600;}
+.tops__add{display:block;width:calc(100% - 0px);margin-top:12px;background:var(--tops-green);color:#fff;border:0;border-radius:4px;padding:8px;font-size:13px;}
+@media(max-width:700px){.tops{padding:32px 16px;}.tops__arrow{display:none;}}
+
+</style>
+<style>
+
+.trnd{--trnd-green:#16b57a;--trnd-purple:#8a5cc8;--trnd-ink:#1f2430;--trnd-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--trnd-ink);box-sizing:border-box;width:100%;}
+.trnd *,.trnd *::before,.trnd *::after{box-sizing:border-box;}
+.trnd a{text-decoration:none;color:inherit;}
+.trnd h1,.trnd h2,.trnd h3,.trnd p,.trnd ul{margin:0;padding:0;}
+.trnd ul{list-style:none;}
+.trnd button{font-family:inherit;cursor:pointer;}
+
+.trnd{padding:48px 40px;background:#fff;}
+.trnd__title{text-align:center;font-size:20px;font-weight:600;margin-bottom:20px;}
+.trnd__tabs{display:flex;justify-content:center;gap:10px;margin-bottom:28px;}
+.trnd__tab{border:0;background:transparent;padding:8px 18px;border-radius:20px;font-size:13px;font-weight:500;}
+.trnd__tab--active{background:var(--trnd-green);color:#fff;}
+.trnd__row{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;}
+.trnd__grid{flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+.trnd__arrow{color:var(--trnd-green);font-size:22px;border:0;background:none;}
+.trnd__card{border-radius:10px;padding:14px;position:relative;}
+.trnd__badge{position:absolute;top:12px;right:12px;background:var(--trnd-green);color:#fff;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-size:9px;line-height:1.1;text-align:center;}
+.trnd__img{height:150px;display:grid;place-items:center;font-size:72px;}
+.trnd__info{background:#fff;border-radius:8px;padding:10px 12px;margin-top:8px;font-size:12px;}
+.trnd__name{font-weight:500;}
+.trnd__stars{color:#f5a623;font-size:11px;margin:4px 0;}
+.trnd__stars small{color:var(--trnd-muted);}
+.trnd__price{font-weight:600;}
+.trnd__add{display:block;width:calc(100% - 0px);margin-top:12px;background:var(--trnd-green);color:#fff;border:0;border-radius:4px;padding:8px;font-size:13px;}
+@media(max-width:700px){.trnd{padding:32px 16px;}.trnd__arrow{display:none;}}
+
+</style>
+<style>
+
+.newl{--newl-green:#16b57a;--newl-purple:#8a5cc8;--newl-ink:#1f2430;--newl-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--newl-ink);box-sizing:border-box;width:100%;}
+.newl *,.newl *::before,.newl *::after{box-sizing:border-box;}
+.newl a{text-decoration:none;color:inherit;}
+.newl h1,.newl h2,.newl h3,.newl p,.newl ul{margin:0;padding:0;}
+.newl ul{list-style:none;}
+.newl button{font-family:inherit;cursor:pointer;}
+
+.newl{padding:48px 40px;background:#fff;}
+.newl__title{text-align:center;font-size:20px;font-weight:600;margin-bottom:28px;}
+.newl__banner{background:var(--newl-purple);color:#fff;border-radius:6px;padding:36px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;max-width:1100px;margin:0 auto;}
+.newl__arches{display:flex;gap:14px;align-items:flex-end;}
+.newl__arch{width:110px;background:#fff;border-radius:70px;display:grid;place-items:center;font-size:48px;}
+.newl__arch--1{height:200px;}.newl__arch--2{height:170px;}
+.newl__content{flex:1 1 300px;max-width:420px;}
+.newl__name{font-size:28px;font-weight:600;margin-bottom:10px;}
+.newl__desc{font-size:13px;line-height:1.7;opacity:.85;}
+.newl__price{margin:14px 0;font-size:15px;}
+.newl__price b{font-size:18px;}
+.newl__colors{display:flex;gap:10px;margin-bottom:20px;}
+.newl__dot{width:16px;height:16px;border-radius:50%;border:2px solid #fff;padding:0;}
+.newl__dot--active{box-shadow:0 0 0 2px rgba(255,255,255,.6);}
+.newl__actions{display:flex;align-items:center;gap:20px;}
+.newl__btn{background:var(--newl-green);color:#fff;border:0;border-radius:6px;padding:12px 28px;font-size:14px;font-weight:500;}
+.newl__link{font-size:14px;}
+.newl__nav{position:absolute;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;border:0;background:var(--newl-green);color:#fff;font-size:10px;}
+.newl__nav--prev{left:8px;}.newl__nav--next{right:8px;}
+@media(max-width:700px){.newl{padding:32px 16px;}.newl__banner{padding:28px 24px;}}
+
+</style>
+<style>
+
+.ftr{--ftr-green:#16b57a;--ftr-purple:#8a5cc8;--ftr-ink:#1f2430;--ftr-muted:#7b8190;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--ftr-ink);box-sizing:border-box;width:100%;}
+.ftr *,.ftr *::before,.ftr *::after{box-sizing:border-box;}
+.ftr a{text-decoration:none;color:inherit;}
+.ftr h1,.ftr h2,.ftr h3,.ftr p,.ftr ul{margin:0;padding:0;}
+.ftr ul{list-style:none;}
+.ftr button{font-family:inherit;cursor:pointer;}
+
+.ftr{background:#fff;padding:32px 64px 24px;border-top:1px solid #eef0f4;}
+.ftr__cta{display:flex;justify-content:flex-end;align-items:center;gap:16px;font-size:13px;margin-bottom:28px;}
+.ftr__cta-btn{background:var(--ftr-green);color:#fff;border:0;border-radius:4px;padding:8px 18px;font-size:13px;}
+.ftr__cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;}
+.ftr__head{font-size:12px;font-weight:600;color:var(--ftr-green);margin-bottom:10px;}
+.ftr__list li{font-size:11px;color:var(--ftr-muted);margin-bottom:6px;}
+.ftr__sub-label{font-size:12px;font-weight:600;margin-bottom:8px;}
+.ftr__sub{display:flex;border:1px solid #dfe3ea;border-radius:4px;overflow:hidden;max-width:220px;}
+.ftr__sub-input{border:0;padding:8px 10px;font-family:inherit;font-size:11px;flex:1;min-width:0;outline:0;}
+.ftr__sub-btn{border:0;background:var(--ftr-green);color:#fff;padding:0 12px;}
+.ftr__bottom{display:flex;justify-content:space-between;align-items:center;margin-top:32px;font-size:10px;color:var(--ftr-muted);flex-wrap:wrap;gap:12px;}
+.ftr__legal{display:flex;gap:16px;}
+.ftr__social{display:flex;gap:14px;}
+@media(max-width:700px){.ftr{padding:24px 20px;}.ftr__cols{grid-template-columns:1fr 1fr;}.ftr__cta{justify-content:space-between;}}
+
+</style>
+</head>
+<body>
+<!-- 1-header-hero.html -->
+
+<!-- ===== SECTION HTML START (hdr) ===== -->
+<header class="hdr" id="hdr-root">
+  <div class="hdr__top">
+    <a class="hdr__logo" href="#">Shopper</a>
+    <form class="hdr__search" id="hdr-search" onsubmit="return false">
+      <input class="hdr__search-input" id="hdr-search-input" type="text" placeholder="Search products">
+      <button class="hdr__search-btn" type="submit" aria-label="Search">&#128269;</button>
+    </form>
+    <span class="hdr__loc">&#128205; Choose location</span>
+    <button class="hdr__signup" type="button">Sign in / Sign up</button>
+  </div>
+  <nav class="hdr__nav" id="hdr-nav">
+    <a class="hdr__nav-link" href="#">Features</a>
+    <a class="hdr__nav-link" href="#">Products</a>
+    <a class="hdr__nav-link" href="#">Blog</a>
+    <a class="hdr__nav-link" href="#">About</a>
+  </nav>
+  <div class="hdr__hero" id="hdr-hero">
+    <div class="hdr__text">
+      <h1 class="hdr__title">Discover Our Latest Products</h1>
+      <p class="hdr__desc">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product.</p>
+      <a class="hdr__btn" href="#">Buy Now</a>
+    </div>
+    <div class="hdr__visual">
+      <div class="hdr__blob"></div>
+      <span class="hdr__product-name">Red Beats M19c2zm/a</span>
+      <span class="hdr__product">&#127911;</span>
+      <span class="hdr__price">$50</span>
+    </div>
+  </div>
+  <div class="hdr__footer-row">
+    <div class="hdr__reviews">
+      <div class="hdr__avatars"><span class="hdr__avatar"></span><span class="hdr__avatar"></span><span class="hdr__avatar"></span></div>
+      <span>Yak Well<br>Reviews</span>
+    </div>
+    <a class="hdr__play" href="#"><span class="hdr__play-icon">&#9654;</span>Play Video</a>
+  </div>
+</header>
+<!-- ===== SECTION HTML END (hdr) ===== -->
+
+
+
+
+<!-- 2-featured-products.html -->
+
+<!-- ===== SECTION HTML START (feat) ===== -->
+<section class="feat" id="feat-root">
+  <div class="feat__inner">
+    <div class="feat__left">
+      <h2 class="feat__name">Apple wireless Airpod</h2>
+      <div class="feat__arches">
+        <div class="feat__arch feat__arch--1">&#127911;</div>
+        <div class="feat__arch feat__arch--2">&#127911;</div>
+        <div class="feat__arch feat__arch--3">&#127807;</div>
+      </div>
+      <p class="feat__price">Price : <b>$45.99</b></p>
+    </div>
+    <div class="feat__right">
+      <h3 class="feat__title">Our Featured Products</h3>
+      <p class="feat__desc">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product.</p>
+      <div class="feat__actions">
+        <button class="feat__btn" id="feat-add" type="button">Add to cart</button>
+        <a class="feat__link" href="#">View more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== SECTION HTML END (feat) ===== -->
+
+
+
+
+<!-- 3-top-sellers.html -->
+
+<!-- ===== SECTION HTML START (tops) ===== -->
+<section class="tops" id="tops-root">
+  <h2 class="tops__title">Top Sellers</h2>
+  <div class="tops__tabs" id="tops-tabs">
+      <button class="tops__tab tops__tab--active" type="button" data-tops-tab="0">Top Picks</button>
+      <button class="tops__tab" type="button" data-tops-tab="1">Watches</button>
+  </div>
+  <div class="tops__row">
+    <div class="tops__grid" id="tops-grid">
+      <article class="tops__card" style="background:#e6f7ef">
+        <span class="tops__badge">Save<br>50%</span>
+        <div class="tops__img">&#127911;</div>
+        <div class="tops__info">
+          <div class="tops__name">Beat Rockerz 332</div>
+          <div class="tops__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>1 reviews</small></div>
+          <div class="tops__price">$20</div>
+        </div>
+        <button class="tops__add" type="button">Add to cart</button>
+      </article>
+      <article class="tops__card" style="background:#d3effb">
+        <span class="tops__badge">Save<br>50%</span>
+        <div class="tops__img">&#127911;</div>
+        <div class="tops__info">
+          <div class="tops__name">Beat Rockerz 332</div>
+          <div class="tops__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>1 reviews</small></div>
+          <div class="tops__price">$20</div>
+        </div>
+        <button class="tops__add" type="button">Add to cart</button>
+      </article>
+      <article class="tops__card" style="background:#e6dcf7">
+        <span class="tops__badge">Save<br>50%</span>
+        <div class="tops__img">&#127911;</div>
+        <div class="tops__info">
+          <div class="tops__name">Beat Rockerz 332</div>
+          <div class="tops__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>1 reviews</small></div>
+          <div class="tops__price">$20</div>
+        </div>
+        <button class="tops__add" type="button">Add to cart</button>
+      </article>
+    </div>
+    <button class="tops__arrow" type="button" aria-label="Next">&#10095;</button>
+  </div>
+</section>
+<!-- ===== SECTION HTML END (tops) ===== -->
+<!-- ===== SECTION JS START (tops) ===== -->
+<script>
+(function () {
+  var root = document.getElementById('tops-root');
+  if (!root) return;
+  var tabs = root.querySelectorAll('[data-tops-tab]');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('tops__tab--active'); });
+      tab.classList.add('tops__tab--active');
+    });
+  });
+})();
+</script>
+<!-- ===== SECTION JS END (tops) ===== -->
+
+<!-- 4-trending-earphones.html -->
+
+<!-- ===== SECTION HTML START (trnd) ===== -->
+<section class="trnd" id="trnd-root">
+  <h2 class="trnd__title">Trending Earphones</h2>
+  <div class="trnd__tabs" id="trnd-tabs">
+      <button class="trnd__tab trnd__tab--active" type="button" data-trnd-tab="0">Earbuds</button>
+      <button class="trnd__tab" type="button" data-trnd-tab="1">Wireless</button>
+      <button class="trnd__tab" type="button" data-trnd-tab="2">Wired</button>
+  </div>
+  <div class="trnd__row">
+    <div class="trnd__grid" id="trnd-grid">
+      <article class="trnd__card" style="background:#dfeaf8">
+        <span class="trnd__badge">Save<br>50%</span>
+        <div class="trnd__img">&#127911;</div>
+        <div class="trnd__info">
+          <div class="trnd__name">Beat Rockerz 332</div>
+          <div class="trnd__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>1 reviews</small></div>
+          <div class="trnd__price">$20</div>
+        </div>
+        <button class="trnd__add" type="button">Add to cart</button>
+      </article>
+      <article class="trnd__card" style="background:#d3effb">
+        <span class="trnd__badge">Save<br>50%</span>
+        <div class="trnd__img">&#127911;</div>
+        <div class="trnd__info">
+          <div class="trnd__name">Beat Rockerz 332</div>
+          <div class="trnd__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>1 reviews</small></div>
+          <div class="trnd__price">$20</div>
+        </div>
+        <button class="trnd__add" type="button">Add to cart</button>
+      </article>
+      <article class="trnd__card" style="background:#d8f5f0">
+        <span class="trnd__badge">Save<br>50%</span>
+        <div class="trnd__img">&#127911;</div>
+        <div class="trnd__info">
+          <div class="trnd__name">Beat Rockerz 332</div>
+          <div class="trnd__stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>1 reviews</small></div>
+          <div class="trnd__price">$20</div>
+        </div>
+        <button class="trnd__add" type="button">Add to cart</button>
+      </article>
+    </div>
+    <button class="trnd__arrow" type="button" aria-label="Next">&#10095;</button>
+  </div>
+</section>
+<!-- ===== SECTION HTML END (trnd) ===== -->
+<!-- ===== SECTION JS START (trnd) ===== -->
+<script>
+(function () {
+  var root = document.getElementById('trnd-root');
+  if (!root) return;
+  var tabs = root.querySelectorAll('[data-trnd-tab]');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('trnd__tab--active'); });
+      tab.classList.add('trnd__tab--active');
+    });
+  });
+})();
+</script>
+<!-- ===== SECTION JS END (trnd) ===== -->
+
+<!-- 5-new-launches.html -->
+
+<!-- ===== SECTION HTML START (newl) ===== -->
+<section class="newl" id="newl-root">
+  <h2 class="newl__title">New Launches</h2>
+  <div class="newl__banner">
+    <button class="newl__nav newl__nav--prev" type="button" aria-label="Previous">&#10094;</button>
+    <div class="newl__arches">
+      <div class="newl__arch newl__arch--1">&#127911;</div>
+      <div class="newl__arch newl__arch--2">&#127911;</div>
+    </div>
+    <div class="newl__content">
+      <h3 class="newl__name">Airdrop 500 Anc</h3>
+      <p class="newl__desc">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a product.</p>
+      <p class="newl__price">Price : <b>$45.99</b></p>
+      <div class="newl__colors" id="newl-colors">
+        <button class="newl__dot newl__dot--active" style="background:#111" type="button" aria-label="Black"></button>
+        <button class="newl__dot" style="background:#f6c915" type="button" aria-label="Yellow"></button>
+        <button class="newl__dot" style="background:#2f6bff" type="button" aria-label="Blue"></button>
+      </div>
+      <div class="newl__actions">
+        <button class="newl__btn" type="button">Add to cart</button>
+        <a class="newl__link" href="#">Explore More</a>
+      </div>
+    </div>
+    <button class="newl__nav newl__nav--next" type="button" aria-label="Next">&#10095;</button>
+  </div>
+</section>
+<!-- ===== SECTION HTML END (newl) ===== -->
+<!-- ===== SECTION JS START (newl) ===== -->
+<script>
+(function () {
+  var wrap = document.getElementById('newl-colors');
+  if (!wrap) return;
+  var dots = wrap.querySelectorAll('.newl__dot');
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () {
+      dots.forEach(function (x) { x.classList.remove('newl__dot--active'); });
+      d.classList.add('newl__dot--active');
+    });
+  });
+})();
+</script>
+<!-- ===== SECTION JS END (newl) ===== -->
+
+<!-- 6-footer.html -->
+
+<!-- ===== SECTION HTML START (ftr) ===== -->
+<footer class="ftr" id="ftr-root">
+  <div class="ftr__cta">
+    <span>Ready to get started?</span>
+    <button class="ftr__cta-btn" type="button">Get started</button>
+  </div>
+  <div class="ftr__cols">
+    <div class="ftr__col">
+      <p class="ftr__sub-label">Subscribe to our Website</p>
+      <form class="ftr__sub" id="ftr-sub" onsubmit="return false">
+        <input class="ftr__sub-input" type="email" placeholder="Enter your email">
+        <button class="ftr__sub-btn" type="submit" aria-label="Subscribe">&#10148;</button>
+      </form>
+    </div>
+    <div class="ftr__col"><h4 class="ftr__head">Services</h4>
+      <ul class="ftr__list"><li>Advertising</li><li>Campaigns</li><li>Branding</li><li>Offers</li></ul></div>
+    <div class="ftr__col"><h4 class="ftr__head">Store</h4>
+      <ul class="ftr__list"><li>Our Story</li><li>Benefits</li><li>Team</li><li>Careers</li></ul></div>
+    <div class="ftr__col"><h4 class="ftr__head">Help</h4>
+      <ul class="ftr__list"><li>Faqs</li><li>Contact Us</li></ul></div>
+  </div>
+  <div class="ftr__bottom">
+    <div class="ftr__legal"><span>Terms &amp; Conditions</span><span>Privacy Policy</span></div>
+    <div class="ftr__social"><span>f</span><span>t</span><span>in</span></div>
+  </div>
+</footer>
+<!-- ===== SECTION HTML END (ftr) ===== -->
+
+
+
+
+</body>
+</html>
