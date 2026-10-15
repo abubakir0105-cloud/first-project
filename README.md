@@ -1,2 +1,2 @@
-azim itbet
+ganodn beklar
 
