@@ -1,2 +1,3 @@
-azim itbet
+azim itbet p'q idish
+
 
