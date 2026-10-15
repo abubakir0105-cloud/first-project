@@ -1,1 +1,1 @@
-#this is abu gandon buyuk qullardan
+#azim itbet
